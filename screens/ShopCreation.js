@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native'
 import React from 'react'
 
-export default function ShopCreation() {
+export default function ShopCreation({navigation}) {
     return (
         <View style={styles.container}>
             <Text style={[styles.textdecoration,styles.mainText]}>Adding A Store</Text>
@@ -26,7 +26,9 @@ export default function ShopCreation() {
             </View>
             <View style={styles.form2}>
             
-            <Pressable style={styles.addbutton}>
+            <Pressable style={styles.addbutton} onPress={()=>{
+                navigation.navigate("Map")
+            }}>
                 <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
             </Pressable>
             </View>

@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import SubscribeScreen from "../screens/SubscribeScreen";
 import ShopCreation from "../screens/ShopCreation";
+import Map from '../components/Map'
 const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
@@ -10,6 +11,7 @@ const RootNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Shop" component={ShopCreation} />
+      <Stack.Screen name="Map" component={Map} />
     </Stack.Navigator>
   );
 };
