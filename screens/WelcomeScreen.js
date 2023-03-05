@@ -25,7 +25,7 @@ const WelcomeScreen = ({ navigation }) => {
       </View>
       <Button
         onPress={() => {
-          navigation.navigate("Sign Up");
+          navigation.navigate("Shop");
         }}
       >
         Go To The Form
