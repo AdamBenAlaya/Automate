@@ -24,20 +24,17 @@ export default function ShopCreation({navigation}) {
                 onPress={()=>{
                     navigation.navigate("Map")
                 }}>
-                <Text style={[styles.textdecoration, styles.locationButton]}>Add Location</Text>
+                <Text style={[styles.textdecoration, styles.locationButton]}
+                onPress={()=>{
+                    navigation.navigate("SearchShop")
+                }}
+                >Add Location</Text>
             </Pressable>
             </View>
+            
             <View style={styles.form2}>
             
             <Pressable style={styles.addbutton} >
-                <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
-            </Pressable>
-            </View>
-            <View style={styles.form2}>
-            
-            <Pressable style={styles.addbutton} onPress={()=>{
-                navigation.navigate("SearchShop")
-            }}>
                 <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
             </Pressable>
             </View>
