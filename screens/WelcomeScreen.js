@@ -30,6 +30,13 @@ const WelcomeScreen = ({ navigation }) => {
       >
         Go To The Form
       </Button>
+      <Button
+        onPress={() => {
+          navigation.navigate("ViewInfo");
+        }}
+      >
+        INFO SUI SUI
+      </Button>
     </View>
   );
 };
