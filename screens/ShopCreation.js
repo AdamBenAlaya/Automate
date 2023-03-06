@@ -32,6 +32,14 @@ export default function ShopCreation({navigation}) {
                 <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
             </Pressable>
             </View>
+            <View style={styles.form2}>
+            
+            <Pressable style={styles.addbutton} onPress={()=>{
+                navigation.navigate("SearchShop")
+            }}>
+                <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
+            </Pressable>
+            </View>
         </View>
     )
 }
