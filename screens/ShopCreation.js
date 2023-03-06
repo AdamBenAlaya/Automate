@@ -20,15 +20,16 @@ export default function ShopCreation({navigation}) {
                     style={styles.inputs}
                 />
                 </View>
-                <Pressable style={{marginTop:30}}>
+                <Pressable style={{marginTop:30}} 
+                onPress={()=>{
+                    navigation.navigate("Map")
+                }}>
                 <Text style={[styles.textdecoration, styles.locationButton]}>Add Location</Text>
             </Pressable>
             </View>
             <View style={styles.form2}>
             
-            <Pressable style={styles.addbutton} onPress={()=>{
-                navigation.navigate("Map")
-            }}>
+            <Pressable style={styles.addbutton} >
                 <Text style={[styles.textdecoration, styles.addbuttonText]}>Add Shop!</Text>
             </Pressable>
             </View>
