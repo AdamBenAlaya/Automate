@@ -13,6 +13,7 @@ export default function ShopCreation({ navigation }) {
                         style={styles.inputs}
                     />
                 </View>
+
                 <View style={{ marginTop: 30 }}>
 
                     <Text style={[styles.textdecoration, styles.labels]}>Speciality of the store :</Text>
@@ -20,6 +21,7 @@ export default function ShopCreation({ navigation }) {
                         style={styles.inputs}
                     />
                 </View>
+
                 <Pressable style={{marginTop:30}} 
                 onPress={()=>{
                     navigation.navigate("Map")
@@ -28,6 +30,13 @@ export default function ShopCreation({ navigation }) {
                 
                 >Add Location</Text>
             </Pressable>
+                <View style={{ marginTop: 30 }}>
+
+                    <Text style={[styles.textdecoration, styles.labels]}>Speciality of the store :</Text>
+                    <TextInput
+                        style={styles.inputs}
+                    />
+                </View>
                 <Pressable style={{ marginTop: 30}}
                     onPress={() => {
                         navigation.navigate("Map")
@@ -35,6 +44,7 @@ export default function ShopCreation({ navigation }) {
                     <Text style={[styles.textdecoration, styles.locationButton, styles.addloc]}
                     >Add Location</Text>
                 </Pressable>
+
             </View>
 
             <View style={styles.form2}>

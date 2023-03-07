@@ -1,8 +1,6 @@
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import WelcomeScreen from "../screens/WelcomeScreen";
-import SubscribeScreen from "../screens/SubscribeScreen";
 import ShopCreation from "../screens/ShopCreation";
 import Map from '../components/Map';
 import SearchShop from '../screens/SearchShop';
@@ -50,9 +48,9 @@ const Tabs = () =>{
       }}
       >
           <Tab.Screen name='Search' component={Dashboard} />
-          <Tab.Screen name='Schedual' component={WelcomeScreen} />
+          <Tab.Screen name='Schedual' component={Schedule} />
           <Tab.Screen name='ShopList' component={Dashboard} />  
-          <Tab.Screen name='YourProfile' component={Dashboard} /> 
+          <Tab.Screen name='ViewInfo' component={ViewInfo} /> 
       </Tab.Navigator>
 
    );
