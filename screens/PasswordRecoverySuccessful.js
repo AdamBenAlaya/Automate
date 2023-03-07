@@ -116,7 +116,7 @@ styles = StyleSheet.create({
     tex1: {
         width: 300,
         height: 38,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         fontSize: 32,
         textAign: 'center',
         color: '#000113',
@@ -128,7 +128,7 @@ styles = StyleSheet.create({
     tex2: {
         width: 300,
         height: 90,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         fontSize: 16,
         color: '#000113',
         paddingTop: 40,

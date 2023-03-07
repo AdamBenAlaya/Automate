@@ -31,13 +31,10 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 24,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         marginVertical: 5,
     },
-
     butt: {
-
-
         justifyContent: 'center',
         alignItems: ' center',
         padding: 10,

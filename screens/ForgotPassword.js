@@ -16,15 +16,10 @@ export default function ForgotPassword() {
 
                 <TextInput
                     style={styles.input}
-                    onChangeText={onChangeNumber}
-                    value={number}
-                    keyboardType='numeric'
-                    placeholder='Enter the Phone number'
                 />
             </View>
             <View
                 style={styles.inputV}>
-
                 <TextInput
                     style={styles.input}
                     onChangeText={onChangeEmail}

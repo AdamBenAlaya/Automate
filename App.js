@@ -1,12 +1,21 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { Component } from "react";
 import RootNavigator from "./navigators/RootNavigator";
-import Map from "./components/Map"
+import { View, Text, Button, Image, StyleSheet } from 'react-native';
+import LogIn from "./screens/LogIn";
+/*<NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer>*/ 
 export default function App() {
   return (
-    <NavigationContainer>
-      <RootNavigator />
-      {/* <Map/> */}
-    </NavigationContainer>
+    <View style={styles.container}>
+    <LogIn/>
+    </View>
   );
 }
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:'purple'
+  }
+})
