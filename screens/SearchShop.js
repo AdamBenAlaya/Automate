@@ -43,7 +43,7 @@ export default function App() {
                         <Text  style={{color:'white',textAlign:'center',paddingTop:10}}>Validate</Text>
                     </Pressable>
                     <Pressable onPress={userLocation} style={{marginRight:10,marginTop:20}}>
-                        <Image source={require("../images/MyLocation.png")} />
+                        <Image source={require("../images/MyLocationImage.png")} />
                     </Pressable>
                 </View>
             </View>
