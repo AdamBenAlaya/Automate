@@ -17,7 +17,7 @@ const LogIn = () => {
     };
 
     return (
-        <KeyboardAvoidingView
+        <KeyboardAvoidingView 
             style={styles.container}
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         >
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 40,
         left: 30,
-        top: 530,
+        top: 480,
     },
     google: {
         marginTop: 13,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 37,
         left: 250,
-        top: 530,
+        top: 480,
     },
     foot2: {
         marginTop: 35,
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor:'#94A3B8'
     },
     inputpass: {
         width: 300,

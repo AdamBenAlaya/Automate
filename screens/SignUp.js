@@ -2,17 +2,17 @@ import { Image, Text, StyleSheet, View, KeyboardAvoidingView, TextInput, Touchab
 import React, { Component } from 'react'
 const CustomButton = ({ title, onPress, buttonStyle, textStyle }) => {
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.customButton, buttonStyle]}>
+        <TouchableOpacity onPress={(onPress)} style={[styles.customButton, buttonStyle]}>
             <Text style={[styles.customButtonText, textStyle]}>{title}</Text>
         </TouchableOpacity>
     )
 }
-const SignUp = () => {
-    const handleLogin = () => {
+const SignUp = ({navigation}) => {
+    const handleLogin = ({navigation}) => {
         alert('Account Created Successfully !')
     };
     return (
-        <KeyboardAvoidingView behavior='padding'>
+        <KeyboardAvoidingView behavior='padding' style={{backgroundColor:'#94A3B8' ,flex:1}}>
             <View>
                 <Text style={styles.mainword}>Sign Up</Text>
                 <Text style={styles.labelname}>Username:</Text>
@@ -22,7 +22,7 @@ const SignUp = () => {
                 <Text style={styles.labelemail}>Email:</Text>
                 <TextInput
                     style={styles.inputemail}
-                />
+                /> 
                 <Text style={styles.labelphone}>Phone Number:</Text>
                 <TextInput style={styles.inputphone}
                 />
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         width:160,
         height:50,
         left:140,
-        top:155,
+        top:130,
         fontFamily:'Roboto',
         fontStyle:'normal',
         //fontWeight:400,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         width:500,
         height:20,
         left:89,
-        top:825,
+        top:790,
         fontFamily:'Roboto',
         fontStyle:'normal',
         //fontWeight:400,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 40,
         left: 30,
-        top: 750,
+        top: 710,
     },
     facebook: {
         marginTop: 13,
@@ -98,14 +98,14 @@ const styles = StyleSheet.create({
         width: 120,
         height: 37,
         left: 250,
-        top: 750,
+        top: 710,
     },
     continue: {
         position: 'absolute',
         width: 230,
         height: 16,
         left: 140,
-        top: 734,
+        top: 700,
         lineHeight: 16,
         fontSize: 16,
        // fontWeight: 400,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 40,
         left: 46,
-        top: 550,
+        top: 510,
     },
     customButtonText: {
         color: '#fff',
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 130,
         left: 47,
-        top: 522,
+        top: 479,
         borderBottomWidth: 1,
         borderBottomColor: '#FFFFFF',
     },
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
         width: 350,
         height: 20,
         left: 47,
-        top: 522,
+        top: 479,
         fontSize: 12,
         color: '#FFFFFF',
     },
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 20,
         left: 47,
-        top: 457,
+        top: 404,
         fontSize: 12,
         color: '#FFFFFF',
     },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 100,
         left: 47,
-        top: 457,
+        top: 404,
         borderBottomWidth: 1,
         borderBottomColor: '#FFFFFF',
     },
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 80,
         left: 47,
-        top: 383,
+        top: 350,
         borderBottomWidth: 1,
         borderBottomColor: '#FFFFFF',
     },
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
         width: 110,
         height: 20,
         left: 47,
-        top: 383,
+        top: 350,
         fontSize: 12,
         color: '#FFFFFF',
     },
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 65,
         left: 47,
-        top: 318,
+        top: 275,
         borderBottomWidth: 1,
         borderBottomColor: '#FFFFFF',
     },
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
         width: 100,
         height: 20,
         left: 47,
-        top: 318,
+        top: 275,
         fontSize: 12,
         color: '#FFFFFF',
     },
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
         width: 100,
         height: 20,
         left: 47,
-        top: 253,
+        top: 210,
         fontSize: 12,
         color: '#FFFFFF',
     },
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
         width: 298,
         height: 50,
         left: 47,
-        top: 253,
+        top: 210,
         borderBottomWidth: 1,
         borderBottomColor: '#FFFFFF',
     },
