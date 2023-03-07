@@ -42,6 +42,9 @@ export default function Dashboard() {
                         <Text style={{ color: 'white',padding:5 }}>: 06/05/23</Text>
                     </View>
                 </View>
+                <Pressable style={{backgroundColor:'black',width:50,height:50,borderRadius:4}}>
+                    <Text style={{color:'white',textAlign:'center',paddingTop:10,fontSize:20}}>+</Text>
+                </Pressable>
             </View>
         </ScrollView>
     )
