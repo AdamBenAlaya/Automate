@@ -59,7 +59,6 @@ const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name='tab' component= {Tabs}/>
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Shop" component={ShopCreation} />
       <Stack.Screen name="Map" component={Map} />
       <Stack.Screen name="SearchShop" component={SearchShop} />

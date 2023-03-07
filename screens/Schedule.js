@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import Button from "../components/Button";
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
-import {LocaleConfig} from 'react-native-calendars';
+
 
 const Schedule = ({ navigation }) => {
   

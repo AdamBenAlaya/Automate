@@ -13,6 +13,7 @@ const ViewInfo = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <Image
+          resizeMode="contain"
           style={styles.logo}
           source={require("../assets/Car.png")}
         />
