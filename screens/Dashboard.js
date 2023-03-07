@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-nati
 import React , {useState} from 'react'
 
 export default function Dashboard() {
-    const [dropState,setDropState] = useState(false)
+    const [dropState,setDropState] = useState(true)
     return (
         <ScrollView style={styles.container}>
             <View >
