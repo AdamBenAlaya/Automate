@@ -20,8 +20,8 @@ const Schedule = ({ navigation }) => {
               }}
       // Specify theme properties to override specific styles for calendar parts. Default = {}
       theme={{
-      backgroundColor: '#ffffff',
-      calendarBackground: '#ffffff',
+      backgroundColor: '#0A233F',
+      calendarBackground: '#0A233F',
       textSectionTitleColor: '#b6c1cd',
       textSectionTitleDisabledColor: '#d9e1e8',
       selectedDayBackgroundColor: '#00adf5',

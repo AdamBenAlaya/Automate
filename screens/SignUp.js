@@ -1,5 +1,6 @@
 import { Image, Text, StyleSheet, View, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
+import Button from "../components/Button";
 const CustomButton = ({ title, onPress, buttonStyle, textStyle }) => {
     return (
         <TouchableOpacity onPress={(onPress)} style={[styles.customButton, buttonStyle]}>
@@ -32,6 +33,14 @@ const SignUp = ({navigation}) => {
                 <Text style={styles.labelmec}>Choose To Sign Up as <Text style={{ color: 'black' }}>Mechanical</Text>Or A <Text style={{ color: 'black' }}>Car Owner</Text></Text>
                 <TextInput
                     style={styles.inputmec} />
+
+                <Button
+                    onPress={() => {
+                    navigation.navigate("ViewInfo");
+                    }}
+                >
+                    Go To The Form
+                </Button>
             </View>
             <CustomButton
                 title="SignUp"
@@ -44,6 +53,7 @@ const SignUp = ({navigation}) => {
             <Image source={require("../assets/continuefacebook.png")} style={styles.facebook} />
             <Text style={styles.logc}>Already Have An Account ? <Text style={{ color: 'white' }}>Log In</Text></Text>
         </KeyboardAvoidingView>
+        
     )
 }
 const styles = StyleSheet.create({
