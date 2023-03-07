@@ -25,9 +25,7 @@ export default function ShopCreation({navigation}) {
                     navigation.navigate("Map")
                 }}>
                 <Text style={[styles.textdecoration, styles.locationButton]}
-                onPress={()=>{
-                    navigation.navigate("SearchShop")
-                }}
+                
                 >Add Location</Text>
             </Pressable>
             </View>
