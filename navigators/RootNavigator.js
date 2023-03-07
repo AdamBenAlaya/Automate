@@ -8,6 +8,8 @@ import ViewInfo from '../screens/ViewInfo';
 import Dashboard from "../screens/Dashboard.js";
 import Schedule from '../screens/Schedule';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import SignUp from '../screens/SignUp';
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,7 +35,7 @@ const Tabs = () =>{
             iconName = focused ? 'basket-outline' : 'basket-sharp';
           }
           else if (route.name === 'YourProfile') {
-            iconName = focused ? 'profile' : 'profile'; // No functional 
+            iconName = focused ? 'profile' : 'profile'; 
           }
 
           // You can return any component that you like here!
@@ -49,8 +51,9 @@ const Tabs = () =>{
       >
           <Tab.Screen name='Search' component={Dashboard} />
           <Tab.Screen name='Schedual' component={Schedule} />
-          <Tab.Screen name='ShopList' component={Dashboard} />  
           <Tab.Screen name='ViewInfo' component={ViewInfo} /> 
+          <Tab.Screen name='ShopList' component={Dashboard} />  
+       
       </Tab.Navigator>
 
    );
@@ -58,6 +61,7 @@ const Tabs = () =>{
 const RootNavigator = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen name='Sign' component= {SignUp}/> 
       <Stack.Screen name='tab' component= {Tabs}/>
       <Stack.Screen name="Shop" component={ShopCreation} />
       <Stack.Screen name="Map" component={Map} />
