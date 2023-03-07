@@ -1,9 +1,15 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import Button from "../components/Button";
+import {Dimensions} from 'react-native';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 const ViewInfo = ({ navigation }) => {
+  
+  
   return (
+    
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <Image
@@ -38,7 +44,12 @@ const ViewInfo = ({ navigation }) => {
         "I recently had to take my car in for some repairs and I couldn't have been happier with the service I received from the team at Top Auto Repair. The staff was friendly and knowledgeable and took the time to explain the issues with my car and the steps they would be taking to fix them.”
         </Text>
       </View>
-      
+      <View style={styles.ButtonsContainer}>
+      <Pressable style={styles.DirectionButton} >
+                <Text style={[styles.textdecoration, styles.addbuttonText]}>Directions</Text>
+      </Pressable>
+        
+      </View>
     </View>
   );
 };
@@ -61,6 +72,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontSize: 20,
     lineHeight: 27,
+    color: 'white',
   },
   Address:{
     position: "absolute",
@@ -68,7 +80,9 @@ const styles = StyleSheet.create({
     height: 50,
     left: 13,
     top: 317,
+    color: 'white',
   },
+
   WorkingHours:{
     position: "absolute",
     width: 119,
@@ -80,6 +94,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontSize: 10,
     lineheight: 14,
+    color: '#AAAABC',
   },
   Type:{
     position: "absolute",
@@ -132,8 +147,8 @@ const styles = StyleSheet.create({
   TravelTimeContent:{
     position: 'absolute',
     height: 18,
-    left: 186,
-    top: 396,
+    left: windowWidth*0.52,
+    top: windowHeight*0.62,
 
     fontFamily: 'normal',
     fontStyle: 'normal',
@@ -147,8 +162,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: 109.32,
     height: 11.33,
-    left: 12,
-    top: 427,
+    left: windowWidth*0.02,
+    top: windowHeight*0.45,
 
     fontFamily: 'normal',
     fontStyle: 'normal',
@@ -163,8 +178,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 337,
     height: 110.67,
-    left: 12,
-    top: 438.33,
+    left: windowWidth*0.03,
+    top: windowHeight*0.68,
 
     fontFamily: 'normal',
     fontStyle: "normal",
@@ -189,7 +204,30 @@ const styles = StyleSheet.create({
     color: "#333333",
     textAlign: "center",
     fontSize: 20,
-    fontWeight: "bold",
+    //fontWeight: "bold",
+  },
+  ButtonsContainer:{
+    position: 'absolute',
+    
+    left: windowWidth *0.03,
+    top: windowHeight *0.8,
+  },
+
+  DirectionButton:{
+    borderRadius: 10,
+    width: 95,
+    backgroundColor: 'transparent',
+    margin: 20,
+    height: 25,
+    borderColor: '#AAAABC',
+    borderStyle:'solid',
+    borderWidth:1,
+  },
+  addbuttonText: {
+    textAlign: 'center',
+    color: 'white',
+    lineHeight:18,
+    fontSize:13,
   },
 });
 

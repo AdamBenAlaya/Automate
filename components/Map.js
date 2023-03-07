@@ -24,7 +24,6 @@ export default function App({navigation}) {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
         })
-        // console.log(location.coords.latitude,location.coords.longitude+"ezaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
 
     }
 
