@@ -4,7 +4,7 @@ import React , {useState} from 'react'
 export default function Dashboard() {
     const [dropState,setDropState] = useState(true)
     return (
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             <View >
                 <View style={styles.HeadTitle}>
                     <Text style={styles.HeadText}>Salim's Car</Text>
@@ -42,11 +42,13 @@ export default function Dashboard() {
                         <Text style={{ color: 'white',padding:5 }}>: 06/05/23</Text>
                     </View>
                 </View>
-                <Pressable style={{backgroundColor:'black',width:50,height:50,borderRadius:4}}>
+
+                
+            </View>
+            <Pressable style={{backgroundColor:'#000113',width:50,height:50,borderRadius:4,position:'absolute',bottom:20,alignSelf:'flex-end', right:20}}>
                     <Text style={{color:'white',textAlign:'center',paddingTop:10,fontSize:20}}>+</Text>
                 </Pressable>
-            </View>
-        </ScrollView>
+        </View>
     )
 }
 

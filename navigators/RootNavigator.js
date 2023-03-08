@@ -9,15 +9,18 @@ import Dashboard from "../screens/Dashboard.js";
 import Schedule from '../screens/Schedule';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SignUp from '../screens/SignUp';
-
-
+import AddCarScreen from "../screens/AddCarScreen";
+import SearchMechanicsProfile from '../screens/SearchMechanicsProfile';
+import OTPScreen1 from "../screens/OtpScreen1";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const Tabs = () =>{
    return (
       <Tab.Navigator
+      
       screenOptions={({ route }) => ({
+
         tabBarStyle:{
           backgroundColor:'black',
         },
@@ -52,7 +55,7 @@ const Tabs = () =>{
           <Tab.Screen name='Search' component={Dashboard} />
           <Tab.Screen name='Schedual' component={Schedule} />
           <Tab.Screen name='ViewInfo' component={ViewInfo} /> 
-          <Tab.Screen name='ShopList' component={Dashboard} />  
+          <Tab.Screen name='ShopList' component={SearchMechanicsProfile} />  
        
       </Tab.Navigator>
 
@@ -60,13 +63,19 @@ const Tabs = () =>{
 }
 const RootNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name='Sign' component= {SignUp}/> 
+    <Stack.Navigator 
+    screenOptions={{
+      headerShown: false
+    }}
+    >
+      {/* <Stack.Screen name='Sign' component= {SignUp}/>  */}
       <Stack.Screen name='tab' component= {Tabs}/>
       <Stack.Screen name="Shop" component={ShopCreation} />
       <Stack.Screen name="Map" component={Map} />
       <Stack.Screen name="SearchShop" component={SearchShop} />
       <Stack.Screen name="ViewInfo" component={ViewInfo} />
+      <Stack.Screen name="AddCar" component={AddCarScreen} />
+      <Stack.Screen name='OtpScreen' component ={OTPScreen1}/>
     </Stack.Navigator>
   );
 };

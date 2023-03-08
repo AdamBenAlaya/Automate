@@ -1,4 +1,4 @@
-import { Image, Text, StyleSheet, View, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native'
+import { Image, Text, StyleSheet, View, KeyboardAvoidingView, TextInput, TouchableOpacity,Pressable } from 'react-native'
 import React, { Component } from 'react'
 import Button from "../components/Button";
 
@@ -46,14 +46,16 @@ const SignUp = ({navigation}) => {
             </View>
             <CustomButton
                 title="SignUp"
-                onPress={handleLogin}
+                onPress={()=>{
+                    navigation.navigate('OtpScreen')
+                }}
                 buttonStyle={{ marginTop: 20, borderRadius: 10 }}
                 textStyle={{ fontSize: 20 }}
             />
             <Text style={styles.continue}>Or Continue With</Text>
             <Image source={require("../assets/Signgoogle.png")} style={styles.google} />
             <Image source={require("../assets/continuefacebook.png")} style={styles.facebook} />
-            <Text style={styles.logc}>Already Have An Account ? <Pressable style={{ color: 'white' }}>Log In</Pressable></Text>
+            <Text style={styles.logc}>Already Have An Account ? <Pressable style={{ color: 'white' }}><Text>Log In</Text></Pressable></Text>
         </KeyboardAvoidingView>
         
     )

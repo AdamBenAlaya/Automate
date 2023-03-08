@@ -1,6 +1,8 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
-const Button = ({title, onPress = () => {}}) => {
+const Button = ({title, onPress = () => {
+
+}}) => {
   return (
     <TouchableOpacity
       onPress={onPress}

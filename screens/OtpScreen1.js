@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, Button, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
+import { View, Text, Button, TouchableOpacity, KeyboardAvoidingView, Pressable } from 'react-native';
 import OTPTextInput from 'react-native-otp-textinput';
 
-const OTPScreen1 = () => {
+const OTPScreen1 = ({navigation}) => {
   const [otpN, setNOTP] = useState('');
 
   const otpInput = useRef(null);
@@ -27,9 +27,13 @@ const OTPScreen1 = () => {
         marginBottom: 50,
         fontWeight: 'bold',
       }}>Don't receive code? Re-send </Text>
-      {/* <TouchableOpacity style={styles.button} onPress={handleVerifyOTP}>
+      <Pressable 
+          onPress={()=>{
+              navigation.navigate('AddCar')
+          }}
+        style={styles.button}>
         <Text style={styles.buttonText}>Submit</Text>
-      </TouchableOpacity> */}
+      </Pressable>
     </View>
   );
 };
@@ -80,13 +84,13 @@ const styles = {
   },
   button: {
     justifyContent: 'center',
-    alignItems: ' center',
+    // alignItems: 'center',
     padding: 10,
-    position: 'absolute',
+    // position: 'absolute',
     width: 252,
     height: 56,
-    left: 85,
-    top: 750,
+    // left: ,
+    // top: 750,
     backgroundColor: '#7389F4',
     borderRadius: 8,
   },
@@ -95,7 +99,7 @@ const styles = {
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    left: 80,
+    // left: 80,
   },
   title1: {
     fontSize: 15,

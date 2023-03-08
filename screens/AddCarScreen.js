@@ -103,7 +103,9 @@ return (
           borderWidth:2,
           backgroundColor:'#374151'}}
         />
-        <Button title='Add this car'/>
+        <Button onPress={()=>{
+            navigation.navigate('tab')
+        }}title='Add this car'/>
         <Text style={styles.alreadyStyle}>Already have a car?</Text>
        </View>
     </ScrollView>
