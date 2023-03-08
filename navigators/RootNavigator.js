@@ -37,8 +37,8 @@ const Tabs = () =>{
           else if (route.name === 'ShopList') {
             iconName = focused ? 'basket-outline' : 'basket-sharp';
           }
-          else if (route.name === 'YourProfile') {
-            iconName = focused ? 'profile' : 'profile'; 
+          else if (route.name === 'ViewInfo') {
+            iconName = focused ? 'information-circle' : 'information-circle-outline'; 
           }
 
           // You can return any component that you like here!
