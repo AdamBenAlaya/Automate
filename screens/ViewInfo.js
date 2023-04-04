@@ -1,10 +1,15 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Image, Pressable } from "react-native";
+import { Text, View, StyleSheet, Image, Pressable , SafeAreaView} from "react-native";
 import Button from "../components/Button";
 import {Dimensions} from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+
+
+
+    
 const ViewInfo = ({ navigation }) => {
   
   
@@ -13,10 +18,26 @@ const ViewInfo = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <Image
-          resizeMode="contain"
           style={styles.logo}
-          source={require("../assets/Car.png")}
+          source={require("../assets/shop.jpg")}
         />
+        <SafeAreaView style={{ flex: 1 }}>
+      <View >
+        
+        <View style={styles.stars}>
+          <MaterialIcons name="star" size={32} style={styles.starselected} />
+          <MaterialIcons name="star" size={32} style={styles.starselected} />
+          <MaterialIcons name="star" size={32} style={styles.starselected} />
+          <MaterialIcons name="star" size={32} style={styles.starselected} />
+          <MaterialIcons name="star" size={32} style={styles.starselected} />
+        </View>
+      </View>
+    </SafeAreaView>
+  
+
+        
+     
+        
         <Text style={styles.NameShop}>
             Top Auto repair
         </Text>
@@ -36,7 +57,7 @@ const ViewInfo = ({ navigation }) => {
             Car Repair Shop
         </Text>
         <Text style={styles.TravelTimeContent}>
-            42 min 11 Britney Spears Songs
+            42 min     11 Britney Spears Songs
         </Text>
         <Text style={styles.Title}>
             AWESOME OVERVIEW
@@ -45,10 +66,41 @@ const ViewInfo = ({ navigation }) => {
         "I recently had to take my car in for some repairs and I couldn't have been happier with the service I received from the team at Top Auto Repair. The staff was friendly and knowledgeable and took the time to explain the issues with my car and the steps they would be taking to fix them.”
         </Text>
       </View>
-      <View style={styles.ButtonsContainer}>
+      <View style={styles.DirectionButtonContainer}>
       <Pressable style={styles.DirectionButton} >
-                <Text style={[styles.textdecoration, styles.addbuttonText]}>Directions</Text>
+                <Text style={[styles.textdecoration, styles.addbuttondirectionText]}>Directions</Text>
       </Pressable>
+      
+        
+      </View>
+    
+      <View style={styles.CallButtonContainer}>
+      <Pressable style={styles.CallButton} >
+                <Text style={[styles.textdecoration, styles.addbuttoncallText]}>Call</Text>
+      </Pressable>
+      
+        
+      </View>
+      <View style={styles.ShareButtonContainer}>
+      <Pressable style={styles.ShareButton} >
+                <Text style={[styles.textdecoration, styles.addbuttonshareText]}>Share</Text>
+      </Pressable>
+      <Image
+          style={styles.gps}
+          source={require("../assets/gps.png")}
+        />
+        <Image
+          style={styles.direction}
+          source={require("../assets/direction.png")}
+        />
+        <Image
+          style={styles.call}
+          source={require("../assets/call.png")}
+        />
+         <Image
+          style={styles.share}
+          source={require("../assets/share.png")}
+        />
         
       </View>
     </View>
@@ -57,85 +109,90 @@ const ViewInfo = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative',
-    width: 360,
-    height: 640,
-    backgroundColor: "#3F4673",
+    flex:1,
+    
+    width: 500,
+    height: 200,
+    
+    backgroundColor: "#161A32",
     
   },
   NameShop: {
+    
     position: "absolute",
-    width: 224,
-    height: 28,
-    left: 10,
-    top: 290,
-    fontFamily: "normal",
-    fontStyle: "normal",
-    fontSize: 20,
-    lineHeight: 27,
+   
+    left: 13,
+    top:380,
     color: 'white',
+    fontWeight:'bold',
+     fontSize:'30'
   },
   Address:{
     position: "absolute",
     width: 300,
-    height: 50,
-    left: 13,
-    top: 317,
+    height: 20,
+    left: 60,
+    top: 430,
     color: 'white',
   },
 
   WorkingHours:{
     position: "absolute",
-    width: 119,
-    height: 14,
-    left: 13,
-    top: 359,
+    width: 300,
+    height: 50,
+    left: 20,
+    top: 460,
 
     fontFamily: "normal",
     fontStyle: "normal",
-    fontSize: 10,
-    lineheight: 14,
+    fontSize: 13,
+   
     color: '#AAAABC',
   },
   Type:{
     position: "absolute",
-    width: 37.02,
+    width: 40,
     height: 13,
     left: 11,
-    top: 383,
+    
 
     fontFamily: "normal",
     fontStyle: "normal",
     
-    fontSize: 10,
+    fontSize: 15,
     lineHeight: 14,
+    fontWeight:'bold',
 
-    background: "#7389F4",
+    color: "#7389F4",
     opacity: 0.5,
+    top:540,
+    left:40,
 
   },
   TravelTime:{
     position: "absolute",
-    width: 66,
+    width: 100,
     height: 13,
     left: 165,
-    top: 383,
+    top: 540,
 
     fontFamily: 'normal',
     fontStyle: "normal",
+    fontWeight:'bold',
     
-    fontSize: 10,
+    fontSize: 15,
     lineHeight: 14, 
-    background: "#7389F4",
+    color: "#7389F4",
     opacity: 0.5,
   },
 
   TypeOfShop:{
     position: "absolute",
-    width: 130.26,
-    height: 23,
+    width: 500.26,
+    height: 20,
     left: 13.74,
-    top: 396,
+    top: 560,
+    fontSize:30,
 
     fontFamily: 'normal',
     fontStyle: 'normal',
@@ -146,47 +203,51 @@ const styles = StyleSheet.create({
     color: "#AAAABC",
   },
   TravelTimeContent:{
-    position: 'absolute',
-    height: 18,
-    left: windowWidth*0.52,
-    top: windowHeight*0.62,
+    position: "absolute",
+    width: 500.26,
+    height: 20,
+    left: 170.74,
+    top: 560,
+    fontSize:30,
 
     fontFamily: 'normal',
     fontStyle: 'normal',
-    
+   
     fontSize: 15,
     lineHeight: 20,
 
     color: "#AAAABC",
   },
   Title:{
-    position: "absolute",
-    width: 109.32,
-    height: 11.33,
-    left: windowWidth*0.02,
-    top: windowHeight*0.45,
+    position: 'absolute',
+    height: 100,
+    
+    left: 25,
+    top: 590,
 
     fontFamily: 'normal',
     fontStyle: 'normal',
     
-    fontSize: 10,
-    lineHeight: 14,
+    fontSize: 13,
+    lineHeight:30,
 
-    background: "#7389f4",
-    opacity: 0.5,
+    color:  "#7389F4",
+    opacity:0.5 ,
+   
   },
   Description:{
     position: 'absolute',
-    width: 337,
-    height: 110.67,
+    
+    width: 380,
+    height: 150.67,
     left: windowWidth*0.03,
-    top: windowHeight*0.68,
+    top: 620,
 
     fontFamily: 'normal',
     fontStyle: "normal",
     
     fontSize: 13,
-    lineHeight: 18,
+    lineHeight: 30,
 
     color: "#AAAABC",
   },
@@ -194,42 +255,157 @@ const styles = StyleSheet.create({
   
   logo: {
     position: "absolute",
-    width: 360,
-    height: 283,
-    left: 0,
+    width: 600,
+    height: 380,
+    right: 10 ,
     top: 0,
+    borderBottomEndRadius:80
   },
-  title: {
-    marginTop: 48,
-    paddingVertical: 10,
-    color: "#333333",
-    textAlign: "center",
-    fontSize: 20,
-    //fontWeight: "bold",
-  },
-  ButtonsContainer:{
+ 
+  DirectionButtonContainer:{
     position: 'absolute',
     
-    left: windowWidth *0.03,
-    top: windowHeight *0.8,
+    left: 0,
+    top: 800,
   },
 
   DirectionButton:{
-    borderRadius: 10,
-    width: 95,
+    borderRadius: 15,
+    width: 120,
+    backgroundColor: '#7360BE',
+    margin: 10,
+    height: 50,
+    borderColor: '#AAAABC',
+   
+   
+    
+  },
+  addbuttondirectionText: {
+    textAlign: 'center',
+    color: 'white',
+    lineHeight:20,
+    fontSize:15,
+    left:15,
+    top:13,
+    fontWeight:'bold',
+    
+
+  },
+  CallButtonContainer:{
+    position: 'absolute',
+    
+    left: 140,
+    top: 800,
+  },
+  CallButton:{
+    borderRadius: 15,
+    width: 110,
     backgroundColor: 'transparent',
-    margin: 20,
-    height: 25,
+    margin: 10,
+    height: 50,
+    borderColor: '#AAAABC',
+    borderStyle:'solid',
+    borderWidth:1,
+   
+  },
+
+
+  addbuttoncallText: {
+    textAlign: 'center',
+    color: 'white',
+    lineHeight:20,
+    fontSize:15,
+    left:20,
+    top:13,
+    fontWeight:'bold',
+
+
+  },
+  ShareButtonContainer:{
+    position: 'absolute',
+    
+    left: 270,
+    top: 800,
+  },
+  ShareButton:{
+    borderRadius: 15,
+    width: 110,
+    backgroundColor: 'transparent',
+    margin: 10,
+    height: 50,
     borderColor: '#AAAABC',
     borderStyle:'solid',
     borderWidth:1,
   },
-  addbuttonText: {
+
+
+  addbuttonshareText: {
     textAlign: 'center',
     color: 'white',
-    lineHeight:18,
-    fontSize:13,
+    lineHeight:20,
+    fontSize:15,
+    left:20,
+    top:13,
+    fontWeight:'bold',
+
+
   },
+
+  
+  
+  stars: {
+    display: 'flex',
+    flexDirection: 'row',
+    
+    position: "absolute",
+    height: 280,
+    right: 330 ,
+    top: 435,
+  
+    
+  },
+  starselected: {
+    color: '#EDC139',
+    
+  
+  },
+  gps:{
+
+    position: "absolute",
+    width: 25,
+    height: 25,
+    right:360 ,
+    bottom:420,
+  },
+  direction:{
+
+    position: "absolute",
+    width: 25,
+    height: 25,
+
+    right:358 ,
+    bottom:23,
+  },
+  call:{
+
+    position: "absolute",
+    width: 25,
+    height: 25,
+
+    right:207 ,
+    bottom:23,
+  },
+  share:{
+
+    position: "absolute",
+    width: 25,
+    height: 25,
+
+    right:80 ,
+    bottom:23,
+  },
+  
+  
 });
 
 export default ViewInfo;
