@@ -45,9 +45,7 @@ export default function Dashboard() {
 
                 
             </View>
-            <Pressable style={{backgroundColor:'#000113',width:50,height:50,borderRadius:4,position:'absolute',bottom:20,alignSelf:'flex-end', right:20}}>
-                    <Text style={{color:'white',textAlign:'center',paddingTop:10,fontSize:20}}>+</Text>
-                </Pressable>
+            
         </View>
     )
 }
