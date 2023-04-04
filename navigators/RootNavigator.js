@@ -12,6 +12,8 @@ import SignUp from '../screens/SignUp';
 import AddCarScreen from "../screens/AddCarScreen";
 import SearchMechanicsProfile from '../screens/SearchMechanicsProfile';
 import OTPScreen1 from "../screens/OtpScreen1";
+import {StyleSheet} from 'react-native';
+import CustomTabBarButton from "../components/CustomTabBarButton";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -20,10 +22,9 @@ const Tabs = () =>{
       <Tab.Navigator
       
       screenOptions={({ route }) => ({
-
-        tabBarStyle:{
-          backgroundColor:'black',
-        },
+        
+        tabBarShowLabel:false,
+        tabBarStyle: styles.tabBarStyle,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
@@ -42,20 +43,33 @@ const Tabs = () =>{
           }
 
           // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <Ionicons name={iconName} size={22} color={color} />;
         },
        
       })}
 
       tabBarOptions={{
-          activeTintColor:'white',
+          activeTintColor:'black',
           inactiveTintColor:'gray',
       }}
       >
-          <Tab.Screen name='Search' component={Dashboard} />
-          <Tab.Screen name='Schedual' component={Schedule} />
-          <Tab.Screen name='ViewInfo' component={ViewInfo} /> 
-          <Tab.Screen name='ShopList' component={SearchMechanicsProfile} />  
+          <Tab.Screen name='Search'
+           
+          component={Dashboard} 
+          options= {{
+            tabBarButton: props => <CustomTabBarButton {...props} />
+          }}
+          />
+          
+          <Tab.Screen name='Schedual' component={Schedule} options= {{
+            tabBarButton: props => <CustomTabBarButton {...props} />
+          }}/>
+          <Tab.Screen name='ViewInfo' component={ViewInfo} options= {{
+            tabBarButton: props => <CustomTabBarButton {...props} />
+          }}/> 
+          <Tab.Screen name='ShopList' component={SearchMechanicsProfile} options= {{
+            tabBarButton: props => <CustomTabBarButton {...props} />
+          }}/>  
        
       </Tab.Navigator>
 
@@ -81,3 +95,16 @@ const RootNavigator = () => {
 };
 
 export default RootNavigator;
+
+
+const styles= StyleSheet.create({
+  tabBarStyle: {
+    position:'absolute',
+    backgroundColor:'transparent',
+    borderTopWidth:0,
+    bottom:5,
+    right:15,
+    left:15, 
+    height:88,
+  },
+});
